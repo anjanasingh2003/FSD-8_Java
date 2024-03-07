@@ -1,0 +1,110 @@
+class Example1 {
+    String name;
+    String address;
+    public int PIN = 1010;
+
+    // private int PIN=1010;
+    Example1(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    void disp() {
+        System.out.println(name);
+        System.out.println(address);
+        System.out.println(PIN);
+    }
+}
+
+public class Encapsulation {
+    public static void main(String[] args) {
+        Example1 ex1 = new Example1("anjana", "bhopal");
+        ex1.disp();
+        System.out.println(ex1.name);
+        System.out.println(ex1.address);
+        System.out.println(ex1.PIN);
+    }
+}
+
+======================================== example-2 ==========================
+class People {
+    String name;
+    String address;
+    private int age;
+
+    People(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    // ===========//setter ----> setting the values for private data members
+    public int setage(int age) {
+        this.age = age;
+        return age;
+    }
+
+    // =====================//Getter ----> get the details to the user
+    public void getage() {
+        if (age > 18) {
+            System.out.println("eligible for vote");
+        } else {
+            System.out.println("not eligible for vote");
+        }
+    }
+
+    void disp() {
+        System.out.println(name);
+        System.out.println(address);
+    }
+}
+
+public class Encapsulation {
+    public static void main(String[] args) {
+        People ex1 = new People("Anjana", "Bhopal");
+        ex1.disp();
+        ex1.setage(19);
+        ex1.getage();
+    }
+}
+================================ example-3 =======================================
+class Example3
+{
+String name;
+String address;
+private int PIN;
+
+Example3(String name,String address)
+{
+this.name = name;
+this.address = address;
+}
+//===========//setter ----> setting the values for private data members
+public int setPIN(int PIN)
+{
+this.PIN = PIN;
+return PIN;
+}
+//=====================//Getter ----> get the details to the user
+public void getPIN()
+{
+System.out.println(PIN);
+}
+
+void disp()
+{
+System.out.println(name);
+System.out.println(address);
+}
+}
+
+public class Encapsulation
+{
+public static void main(String[] args)
+{
+Example3 ex1= new Example3("Anjana","Bhopal");
+ex1.disp();
+ex1.setPIN(1010);
+ex1.getPIN();
+}
+}
+
