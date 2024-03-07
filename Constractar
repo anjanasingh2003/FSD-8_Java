@@ -1,0 +1,602 @@
+public class Constructor 
+{ 
+
+    Constructor()
+    {
+
+    }
+    static int add(int a,int b)
+    {
+        int c=a+b;
+        return c;
+    }
+
+    public static void main(String[] args)
+     {
+        Constructor s1 = new Constructor();
+       System.out.println( s1.add(10, 20)); 
+    }
+}
+
+====================== example-2 ============================
+class Employee{
+
+    String name;
+    int id;
+    double salary;
+
+Employee(String name, double salary)
+{
+    this.name = name;
+    this.salary = salary;
+}
+Employee(String name , int id,double salary)
+{
+    this.name = name;
+    this.id = id;
+    this.salary = salary;
+}
+
+void disp()
+{
+    System.out.println(name);
+    System.out.println(id);
+    System.out.println(salary);
+}
+
+}
+
+public class Constructor {
+
+    public static void main(String[] args) 
+    {
+        Employee e1 = new Employee("anjana" , 2000);
+        e1.disp();
+
+        Employee e2 = new Employee("anjana" ,23, 2000);
+        e2.disp();
+    }
+}
+
+================================ example-3 ===============================
+
+class Employee
+{
+    Employee()
+    {
+         System.out.println("object");
+    }
+
+}
+public class Constructor {
+
+        public static void main(String[] args) 
+        {
+            Employee e1 = new Employee();
+            System.out.println(System.identityHashCode(e1));
+            Employee e2 = new Employee();
+            System.out.println(System.identityHashCode(e2));
+
+        }
+    }
+============================== exaple-4 || copy constractar ========================
+
+class Employee
+{
+
+String name;
+int id;
+Employee(String name, int id)
+{
+this.name = name;
+this.id = id;
+}
+
+Employee(Employee e)
+{
+name = e.name;
+id = e.id;
+
+}
+
+void disp()
+{
+System.out.println(name);
+System.out.println(id);
+}
+
+}
+
+public class Constructor
+{
+
+public static void main(String[] args)
+{
+Employee e1 = new Employee("anjana",67);
+e1.disp();
+Employee e2 = new Employee(e1);
+e2.disp();
+
+}
+}
+
+============================== exaple-5 ===============================
+
+public class Constructor
+{
+String name;
+int id;
+String branch;
+static String college = "bansal";///////////// static varible  /////////////////
+
+Constructor(String name,int id, String branch)
+{
+this.name = name;
+this.id = id;
+this.branch = branch;
+
+}
+
+void disp()
+{
+System.out.println(name);
+System.out.println(id);
+System.out.println(branch);
+System.out.println(college);
+}
+
+public static void main(String[] args)
+{
+Constructor s1 = new Constructor("anjana",67,"CSE");
+s1.disp();
+Constructor s2 = new Constructor("himanshu",65,"CSE");
+s2.disp();
+
+}
+}
+
+================================ exapmle-6 ========================
+
+public class Constructor {
+    String name;
+    int adhar;
+    String pen;
+    double accountNumber;
+    double principle;
+    double time;
+    static double roi = 10;///  static variable 
+
+    Constructor(String name, int adhar, String pen, double accountNumber, double principle, double time) {
+        this.name = name;
+        this.adhar = adhar;
+        this.pen = pen;
+        this.accountNumber = accountNumber;
+        this.principle = principle;
+        this.time = time;
+
+    }
+
+    double calculate(double principle, double time) {
+        double SI;
+        SI = (principle * roi * time) / 100;
+        double ammount = principle + SI;
+        return ammount;
+    }
+
+    void disp() {
+        System.out.println(name);
+        System.out.println(adhar);
+        System.out.println(pen);
+        System.out.println(accountNumber);
+    }
+
+    public static void main(String[] args) 
+                   {
+                       Constructor s1 = new Constructor("anjana",213223,"345hnv4",3456,500,100);
+                       s1.disp();
+                       Constructor s2 = new Constructor("himanshu",3454,"234f67",354536,4000,100);
+                       s2.disp();
+                       
+                   }
+}
+
+============================= exaple-7 ==========================
+
+public class Constructor
+{
+static int count =0;
+
+Constructor()
+{
+count++;
+}
+
+public static void main(String[] args)
+{
+Constructor c= new Constructor();
+Constructor c1 = new Constructor();
+System.out.println(count);
+}
+}
+
+public class Constructor
+{
+static int sum=0;
+static int sub=0;
+
+static int add(int a,int b)  // static block
+{
+sum=a+b;
+return sum;
+}
+
+static
+{
+int x=10;
+int y=4;
+sub= x-y;
+System.out.println(sub);  // static block
+}
+static
+{
+int p=2;
+int q=4;
+sum=p+q;
+System.out.println(sum);
+}
+
+public static void main(String[] args)
+{
+
+System.out.println(add(sum, sub));
+}
+
+}
+===========================example-8 ========================
+import java.util.Scanner;
+public class Constructor 
+{
+
+    static int sub(int a,int b )
+    {
+        int c=a-b;
+        return c;
+    }
+
+    static int sub(int a,int b,int c )
+    {
+        int d=(a-b)+c;
+        return d;
+    }
+
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter first number");
+        int a=sc.nextInt();
+        System.out.println("enter second number");
+        int b=sc.nextInt();
+        System.out.println("enter third number");
+        int c= sc.nextInt();
+        System.out.println(sub(a,b));
+        System.out.println(sub(a,b,c));
+    }
+}
+
+============================== example-9 ===========================
+
+import java.util.Scanner;
+public class Constructor 
+{
+
+    static int sub(int a,int b )
+    {
+        int c=a-b;
+        return c;
+    }
+
+    static double sub(double a ,double b)
+    {
+        double c=(a+b);
+        return c;
+    }
+
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter first number");
+        double a=sc.nextDouble();
+        System.out.println("enter second number");
+        double b=sc.nextDouble();
+        System.out.println(sub(a,b));
+    //     System.out.println("enter first number");
+    //     int a=sc.nextInt();
+    //     System.out.println("enter second number");
+    //     int b=sc.nextInt();
+    //     System.out.println(sub(a,b));
+     }
+}
+
+============================ example-10 =============================
+
+import java.util.Scanner;
+public class Constructor 
+{
+
+    static float sub( int a,float b )
+    {
+        float c=a-b;
+        return c;
+    }
+
+    static float sub(float a ,int b)
+    {
+        float c=(a+b);
+        return c;
+    }
+
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter first number");
+        int a=sc.nextInt();
+        System.out.println("enter second number");
+        float b=sc.nextFloat();
+        System.out.println(sub(a,b));
+
+    }
+}
+
+============================ example-1 || method orerriding ===============================
+class Animal
+{
+    void eat()
+    {
+        System.out.println("animal is eating");
+    }
+}
+class Dog extends Animal
+{
+   void eat()
+    {
+        System.out.println("dog is eating");
+    }
+
+}
+public class Constructor
+{
+    public static void main(String[] args)
+     {
+        Dog d1 = new Dog();
+        d1.eat();
+
+    }
+}
+
+===========================  example-2 ==========================
+ class  college
+{
+    int student(int a,int b)
+    {
+        int c=a+b;
+        System.out.println("hiiii");
+        return c;
+
+    }
+  }
+     class student extends college
+  {
+    int student(int a,int b,int c)
+    {
+        int d=(a+b)-c;
+        System.out.println("hello");
+        return d;
+
+    }
+  }
+    public class Constructor 
+    {
+      public static void main(String[] args) 
+   {
+       student s1=new student();
+       System.out.println(s1.student(20,30,4));
+
+       college c1=new college();
+       System.out.println(c1.student(20,30));
+         
+   }
+ }
+
+=============================== example-3 ==========================
+class Animal
+{
+  void eat()
+  {
+    System.out.println("eating");
+  }
+  int legs = 4;
+}
+
+class Tiger extends Animal
+{
+  int legs = 3;
+  void eat()
+  {
+    System.out.println("eating flesh");
+  }
+}
+
+class Dog extends Animal
+{
+  int legs = 2;
+  void eat()
+  {
+    System.out.println("eating bisscuit");
+  }
+}
+
+public class Constructor
+ {
+  public static void main(String[] args)
+   {
+     Dog d1 = new Dog();
+     d1.eat();
+     System.out.println(d1.legs);
+
+     Tiger t= new Tiger();
+     t.eat();
+     System.out.println(t.legs);
+     
+     Animal a1=new Animal();
+     a1.eat();
+     System.out.println(a1.legs);
+  
+     
+  }
+  
+}
+
+
+/==========================================  can be main method is overload in java  || yes  ==================================================
+
+public class Constructor
+ {
+    public static void main(String[] args) // default main method in first way
+    {
+       System.out.println("jvm will act first");
+       main();
+    }
+
+    public static void main(String...a) // default main method in second way (only use three dott(...) means variable argument)
+    {
+      System.out.println("jvm will act first ");
+      System.out.println(main(10, 20));
+    }
+
+    public static int main(int a,int b) 
+    {
+       int c=a+b;
+       return c;
+    }
+  
+  
+}
+
+
+
+
+=============================================================================
+
+class fruits
+{
+  void mango()
+  {
+    System.out.println("I am mongo method");
+  }
+}
+
+class apple extends fruits
+{
+  void mango()
+  {
+    System.out.println("I am apple method");
+  }
+}
+
+class banana extends fruits
+{
+  void mango()
+  {
+    System.out.println("I am banana method");
+  }
+}
+
+class grapes extends fruits
+{
+  void mango()
+  {
+    System.out.println("I am grapes method");
+  }
+}
+
+public class Constructor
+{
+  public static void main(String[] args)
+   {
+      grapes g1 = new grapes();
+      g1.mango();
+
+      banana b1 = new banana();
+      b1.mango();
+
+      apple a1 = new apple();
+      a1.mango();
+
+      fruits f1 = new fruits();
+      f1.mango();
+  }
+}
+
+==================================================================
+
+class calculation
+{
+   int add(int a,int b)
+   {
+      int c= a+b;
+      return c;
+   }
+}
+
+class subtraction extends calculation
+{
+  int add(int a,int b)
+  {
+    int c=a-b;
+    return c;
+  }
+}
+
+class multiplication extends calculation
+{
+  int add(int a,int b)
+  {
+    int c=a*b;
+    return c;
+  }
+}
+
+class division  extends calculation
+{
+  int add(int a,int b)
+  {
+    int c=a/b;
+    return c;
+  }
+}
+
+public class Constructor 
+{
+  public static void main(String[] args) 
+  {
+     division d1=new division();
+     System.out.println(d1.add(10, 5));
+     
+
+     multiplication m1=new multiplication();
+     System.out.println(m1.add(10, 20));
+
+     subtraction s1=new subtraction();
+     System.out.println(s1.add(10, 20));
+
+     calculation c1=new calculation();
+     System.out.println(c1.add(10, 20));
+  }
+  
+}
+
+
+
+
+   
+
