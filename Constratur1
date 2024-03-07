@@ -1,0 +1,74 @@
+public class Constractor1 
+{
+    String name;
+    int rollno;
+    String branch;
+    static String college = "BIRTS";
+
+    Constractor1(String name,int rollno, String branch)
+    {
+        
+        this.name = name;
+        this.rollno = rollno;
+        this.branch = branch;
+    }
+
+    public static void main(String[] args)
+     {
+        Constractor1 s1 = new Constractor1("Anjana",11,"CSE");
+        System.out.println(s1.name);
+        System.out.println(s1.rollno);
+        System.out.println(s1.branch);
+        System.out.println(college);
+    }
+
+}
+
+==========================================================================
+public class Constractor1 
+{
+    String name;
+    int rollno;
+    String branch;
+
+    public static void main(String[] args)
+     {
+        Constractor1 s1 = new Constractor1();
+        s1.name = "Anjana";
+        s1.rollno = 11;
+        s1.branch = "CSE";
+
+        System.out.println(s1.name);
+        System.out.println(s1.rollno);
+        System.out.println(s1.branch);
+    }
+
+}
+
+==================================================================================
+
+public class Constractor1 
+{
+    String name;
+    int rollno;
+    String branch;
+    static String college = "BIRTS";
+
+    Constractor1(String n,int r, String b)
+    {
+        name = n;
+        rollno = r;
+        branch = b;
+    }
+
+    public static void main(String[] args)
+     {
+        Constractor1 s1 = new Constractor1("Anjana",11,"CSE");
+        System.out.println(s1.name);
+        System.out.println(s1.rollno);
+        System.out.println(s1.branch);
+        System.out.println(college);
+    }
+
+}
+
